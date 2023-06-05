@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC0352F2-F0BB-4CB8-8EBE-4505E4BFEA85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="all_apartment_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="all_apartment_details.Designer.cs">
+      <DependentUpon>all_apartment_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="complain_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="complain_details.Designer.cs">
+      <DependentUpon>complain_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_complaint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_complaint.Designer.cs">
+      <DependentUpon>create_complaint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_employee.Designer.cs">
+      <DependentUpon>create_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_employee_detailed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_employee_detailed.Designer.cs">
+      <DependentUpon>create_employee_detailed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_owner.Designer.cs">
+      <DependentUpon>create_owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_owner_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_owner_details.Designer.cs">
+      <DependentUpon>create_owner_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_tenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_tenant.Designer.cs">
+      <DependentUpon>create_tenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_tenantdetails_byowner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_tenantdetails_byowner.Designer.cs">
+      <DependentUpon>create_tenantdetails_byowner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="create_tenant_byonwer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="create_tenant_byonwer.Designer.cs">
+      <DependentUpon>create_tenant_byonwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_create_tenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_create_tenant.Designer.cs">
+      <DependentUpon>employee_create_tenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_details.Designer.cs">
+      <DependentUpon>employee_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Owner.Designer.cs">
+      <DependentUpon>Owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="owners_tenantDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="owners_tenantDetails.Designer.cs">
+      <DependentUpon>owners_tenantDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="owner_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="owner_details.Designer.cs">
+      <DependentUpon>owner_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="owner_roomDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="owner_roomDetails.Designer.cs">
+      <DependentUpon>owner_roomDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="resolve_complain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resolve_complain.Designer.cs">
+      <DependentUpon>resolve_complain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant.Designer.cs">
+      <DependentUpon>Tenant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tenantmy_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenantmy_details.Designer.cs">
+      <DependentUpon>Tenantmy_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tenant_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tenant_details.Designer.cs">
+      <DependentUpon>Tenant_details.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="all_apartment_details.resx">
+      <DependentUpon>all_apartment_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="complain_details.resx">
+      <DependentUpon>complain_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_complaint.resx">
+      <DependentUpon>create_complaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_employee.resx">
+      <DependentUpon>create_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_employee_detailed.resx">
+      <DependentUpon>create_employee_detailed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_owner.resx">
+      <DependentUpon>create_owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_owner_details.resx">
+      <DependentUpon>create_owner_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_tenant.resx">
+      <DependentUpon>create_tenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_tenantdetails_byowner.resx">
+      <DependentUpon>create_tenantdetails_byowner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="create_tenant_byonwer.resx">
+      <DependentUpon>create_tenant_byonwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_create_tenant.resx">
+      <DependentUpon>employee_create_tenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_details.resx">
+      <DependentUpon>employee_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Owner.resx">
+      <DependentUpon>Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="owners_tenantDetails.resx">
+      <DependentUpon>owners_tenantDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="owner_details.resx">
+      <DependentUpon>owner_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="owner_roomDetails.resx">
+      <DependentUpon>owner_roomDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resolve_complain.resx">
+      <DependentUpon>resolve_complain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant.resx">
+      <DependentUpon>Tenant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tenantmy_details.resx">
+      <DependentUpon>Tenantmy_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tenant_details.resx">
+      <DependentUpon>Tenant_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3d384d829dbf4b678cfea617114e149d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Laptop-Backgrounds-Free-Download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_119561214_jkoqtYS7gWQaJOdgmIfWVNMnWj82rlIR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smooth-silky-colorful-cgi-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\housing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-05-10 030211.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-account-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-person-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-collaborator-male-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-05-10 031218.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-male-user-group-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-user-male-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hotel-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-worker-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-owner-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-apartment-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-details-100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

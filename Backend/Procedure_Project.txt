@@ -1,0 +1,90 @@
+Tenant Detail in Owner Page-
+
+create procedure getTenantByOwner
+    @ownerUsername varchar(50)
+AS
+BEGIN
+    SELECT t.*
+    FROM Tenant t
+    JOIN agreement a ON t.userName = a.tenant_id
+    JOIN Owner_Table o ON a.Owner_id = o.userName
+    WHERE o.userName = @ownerUsername
+END
+
+EXEC getTenantByOwner @ownerUsername = 'o111';
+-----------------------------------------------------------------------
+Get Apartment Detail Of Owner Table-
+
+CREATE PROCEDURE GetApartmentDetails
+  @pUserName VARCHAR(30)
+AS
+BEGIN
+  SELECT a.occupancy_status, a.Apartment_no, a.design, a.Floor_no, a.Building_name, a.parking_sapce
+  FROM Apartment a
+  INNER JOIN Owner_Table t ON a.Apartment_no = t.apartment_no
+  WHERE t.userName = @pUserName;
+END;
+
+EXEC GetApartmentDetails 'o111';
+-----------------------------------------------------------------------
+Update complaint status By employee-
+
+CREATE PROCEDURE UpdateComplaintStatus
+  @pBuildingName VARCHAR(20),
+  @pStatus VARCHAR(30)
+AS
+BEGIN
+  UPDATE building
+  SET status = @pStatus
+  WHERE Building_name = @pBuildingName;
+END;
+
+
+EXEC UpdateComplaintStatus 'B', 'Completed';
+-----------------------------------------------------------------------
+To get Building Complaint-
+
+CREATE PROCEDURE GetBuildingComplaints
+  @pBuildingName VARCHAR(20)
+AS
+BEGIN
+  SELECT building.complaint, building.status
+  FROM building
+  WHERE building.Building_name = @pBuildingName;
+END;
+EXEC GetBuildingComplaints 
+ @pBuildingName = 'B';
+-----------------------------------------------------------------------
+Get apartment detail of tenant-
+
+CREATE PROCEDURE GetApartmentDetailsForTenant(
+  @pUserName VARCHAR(30)
+)
+AS
+BEGIN
+  SELECT a.occupancy_status, a.Apartment_no, a.design, a.Floor_no, a.Building_name, a.parking_sapce,
+         r.Date_of_Renting, r.Monthly_rent
+  FROM Apartment a
+  INNER JOIN Rental r ON a.Apartment_no = r.apartment_no
+  INNER JOIN Tenant t ON r.Tenant_id = t.userName
+  WHERE t.userName = @pUserName;
+END;
+
+EXEC GetApartmentDetailsForTenant 't001';
+-----------------------------------------------------------------------
+Get owner detail in tenant-
+
+CREATE PROCEDURE GetOwnerDetailsForTenant(
+  @tenantUsername VARCHAR(30)
+)
+AS
+BEGIN
+  SELECT ot.userName, ot.Owner_Name, ot.aadhar_ID, ot.building_name
+  FROM Owner_Table ot
+  INNER JOIN Agreement a ON ot.userName = a.Owner_id
+  INNER JOIN Tenant t ON a.tenant_id = t.userName
+  WHERE t.userName = @tenantUsername;
+END;
+
+EXEC GetOwnerDetailsForTenant 't001';
+-----------------------------------------------------------------------
